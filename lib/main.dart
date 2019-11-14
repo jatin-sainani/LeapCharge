@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smartshoe/home.dart';
 import 'package:smartshoe/past.dart';
-import 'package:smartshoe/bar.dart';
+import 'package:smartshoe/accounts.dart';
 import 'package:smartshoe/login.dart';
+import 'package:smartshoe/pastRecord.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
         routes: <String,WidgetBuilder>
         {
           'home': (BuildContext context) => home(),
+          'past': (BuildContext context) => pastRecords(),
+          'accounts': (BuildContext context) => accounts(),
+
         },
       theme: ThemeData(
         // This is the theme of your application.

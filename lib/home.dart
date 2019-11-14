@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'pastRecord.dart';
 
 
 class home extends StatefulWidget
@@ -14,7 +15,7 @@ class _home extends State<home> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('Piezoshoe',
+        title: Text('LeapCharge',
           style: TextStyle(
             color: Colors.red,
             fontSize: 40.0,
@@ -80,6 +81,7 @@ class _home extends State<home> {
                 style: TextStyle(
                     fontSize: 20.0
                 ),),
+              onTap: (){Navigator.of(context).pushReplacementNamed('past');},
 
 
             ),
@@ -88,7 +90,9 @@ class _home extends State<home> {
               title: Text('Account',
                 style: TextStyle(
                     fontSize: 20.0
-                ),),
+                ),
+              ),
+              onTap: (){Navigator.of(context).pushReplacementNamed('accounts');},
 
 
             ),

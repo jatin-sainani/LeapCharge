@@ -87,7 +87,7 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
                                   Padding(
                                     padding: const EdgeInsets.only(top: 100.0 ),
                                     child: new Container(
-                                        width: 200.0,
+                                        width: 300.0,
                                         height: 200.0,
                                         alignment: Alignment.center,
                                         decoration: new BoxDecoration(
@@ -101,7 +101,7 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
                                           borderRadius: BorderRadius.all(Radius.circular(50.0)),
 
                                           image: DecorationImage(
-                                            image: AssetImage('assets/logo2.png'),
+                                            image: AssetImage('assets/logo.jpeg'),
                                             fit:BoxFit.fitHeight,
 
 
