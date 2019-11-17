@@ -228,6 +228,35 @@ class _accounts extends State<accounts>
               ),
             ),
 
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: InkWell(
+                onTap: (){Navigator.of(context).pushReplacementNamed('login');},
+                child: Container(
+                  width: 320.0,
+                  height: 60.0,
+                  alignment: FractionalOffset.center,
+                  decoration: new BoxDecoration(
+                    // color: const Color.fromRGBO(247, 64, 106, 1.0),
+                    //color: Color(0xff00EF00),
+                    //color: Colors.green,
+                    color: Colors.red,
+                    borderRadius: new BorderRadius.all(const Radius.circular(30.0)),
+                  ),
+
+                  child: new Text(
+                    'Logout',
+                    style: new TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.3,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
           ],
         ),
       ),

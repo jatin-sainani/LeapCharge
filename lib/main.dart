@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
         routes: <String,WidgetBuilder>
         {
+          'login':(BuildContext context) => login(),
           'home': (BuildContext context) => home(),
           'past': (BuildContext context) => pastRecords(),
           'accounts': (BuildContext context) => accounts(),
