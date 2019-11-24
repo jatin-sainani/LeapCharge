@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'pastRecord.dart';
+import 'package:pedometer/pedometer.dart';
+import 'dart:async';//
 
 
 class home extends StatefulWidget
@@ -9,6 +10,54 @@ class home extends StatefulWidget
 }
 
 class _home extends State<home> {
+
+  Pedometer _pedometer;
+  StreamSubscription<int> _subscription;
+  String _stepCountValue = 'unknown';
+  String _Calories='0.045';
+  double percent=0.5;
+
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+    percent=0.5;
+  }
+
+  // Platform messages are asynchronous, so we initialize in an async method.
+  Future<void> initPlatformState() async {
+    startListening();
+  }
+
+  void onData(int stepCountValue) {
+    print(stepCountValue);
+  }
+
+  void startListening() {
+    _pedometer = new Pedometer();
+    _subscription = _pedometer.pedometerStream.listen(_onData,
+        onError: _onError, onDone: _onDone, cancelOnError: true);
+  }
+
+  void stopListening() {
+    _subscription.cancel();
+  }
+
+  void _onData(int stepCountValue)
+  async {
+    setState(() {
+      var Calorie_coeff=0.045;
+      _stepCountValue = "${stepCountValue-75000}";
+      _Calories="${(stepCountValue-75000)*Calorie_coeff}";
+      percent=(stepCountValue-75000)/10000;
+      print(percent);
+    });
+
+  }
+
+  void _onDone() => print("Finished pedometer tracking");
+
+  void _onError(error) => print("Flutter Pedometer Error: $error");
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +95,7 @@ class _home extends State<home> {
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: Colors.red),
               accountName: Padding(
-                padding:  EdgeInsets.only(top:25.0,bottom: 20.0),
+                padding:  EdgeInsets.only(top:20.0),
                 child: Text("Jatin Sainani",
                   style: TextStyle(color: Colors.black,
                       fontSize: 30.0),),
@@ -105,10 +154,10 @@ class _home extends State<home> {
           children: <Widget>[
             CircularPercentIndicator(
                 radius: 350,
-            percent: 0.65,
+            percent: percent,
             progressColor: Colors.blue,
             lineWidth: 20.0,
-            center: Text('65%',style:
+            center: Text("${percent*100}%",style:
               TextStyle(color: Colors.blue,
               fontSize:75.0,
                   fontWeight: FontWeight.bold),
@@ -124,7 +173,7 @@ class _home extends State<home> {
               ),
             ),
 
-              Text('6500',
+              Text('$_stepCountValue',
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: 20.0
@@ -144,7 +193,7 @@ class _home extends State<home> {
                   ),
                 ),
 
-                Text('200Kcal',
+                Text('$_Calories',
                   style: TextStyle(
                       color: Colors.blue,
                       fontSize: 20.0

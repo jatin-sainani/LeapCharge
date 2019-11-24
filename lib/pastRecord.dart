@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pedometer/pedometer.dart';
+import 'past.dart';
 
 class pastRecords extends StatefulWidget
 {
@@ -44,7 +46,7 @@ class _pastRecords extends State<pastRecords>
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(color: Colors.red),
               accountName: Padding(
-                padding:  EdgeInsets.only(top:25.0,bottom: 20.0),
+                padding:  EdgeInsets.only(top:20.0),
                 child: Text("Jatin Sainani",
                   style: TextStyle(color: Colors.black,
                       fontSize: 30.0),),
@@ -100,18 +102,20 @@ class _pastRecords extends State<pastRecords>
           ],
         ),
       ),
-      body: Center(
-        child:
+      body:
+      Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SimpleBarChart.withSampleData(),
+      )
+      /*Center(
+        child: FittedBox(
 
-           Container(
-          height: 160.0,
-          width: 160.0,
-          decoration: BoxDecoration(
-            color: Colors.red,
-              borderRadius: BorderRadius.all(Radius.circular(80.0))
-    ),
- ),
-      ),
+          child: Image.asset('assets/blank(1).png',),
+          fit: BoxFit.cover,
+        ),
+      )*/
+
+
 
 
     );

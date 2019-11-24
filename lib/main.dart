@@ -4,10 +4,14 @@ import 'package:smartshoe/past.dart';
 import 'package:smartshoe/accounts.dart';
 import 'package:smartshoe/login.dart';
 import 'package:smartshoe/pastRecord.dart';
+import 'package:charts_flutter/flutter.dart' as charts;
 
 void main() => runApp(MyApp());
 
+
 class MyApp extends StatelessWidget {
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -33,6 +37,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
       ),
       home: login()
+
+
     );
   }
 }

@@ -25,7 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
+
   flutter_search_bar: ^2.0.7
+  pedometer: ^1.0.0
   flutter_test:
     sdk: flutter
 
@@ -49,6 +51,9 @@ flutter:
     - assets/3.jpg
     - assets/1.jpg
     - assets/details.png
+    - assets/blank.png
+    - assets/blank(1).png
+
 
 
   #  - images/a_dot_ham.jpeg

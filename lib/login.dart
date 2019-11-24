@@ -56,6 +56,7 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
         false;
   }
 
+  TextEditingController _controller = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -129,9 +130,8 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
                                                     .spaceAround,
                                                 children: <Widget>[
                                                   new TextFormField(
-
-
-                                                    decoration: InputDecoration(
+                                                    controller: _controller
+                                                    ,decoration: InputDecoration(
                                                       hintText: "Username",
                                                       hintStyle: TextStyle(
                                                           color: Colors.white
@@ -198,10 +198,17 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
                                   child: new InkWell(
                                       onTap: ()
                                       {
-                                        setState(() {
-                                          animationStatus = 1;
-                                        });
-                                        _playAnimation();
+                                        print(_controller.text);
+                                        if(_controller.text=='js.sainani.droid@gmail.com') {
+                                          setState(() {
+                                            animationStatus = 1;
+                                          });
+                                          _playAnimation();
+                                        }
+                                        else
+                                          {
+                                            print('Error');
+                                          }
                                         //Navigator.of(context).pushReplacementNamed('recent');
 
                                       },

@@ -48,7 +48,7 @@ class _accounts extends State<accounts>
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(color: Colors.red),
               accountName: Padding(
-                padding:  EdgeInsets.only(top:25.0,bottom: 20.0),
+                padding:  EdgeInsets.only(top:20.0),
                 child: Text("Jatin Sainani",
                   style: TextStyle(color: Colors.black,
                       fontSize: 30.0),),
