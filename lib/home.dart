@@ -47,9 +47,9 @@ class _home extends State<home> {
   async {
     setState(() {
       var Calorie_coeff=0.045;
-      _stepCountValue = "${stepCountValue-75000}";
-      _Calories="${(stepCountValue-75000)*Calorie_coeff}";
-      percent=(stepCountValue-75000)/10000;
+      _stepCountValue = "${stepCountValue-82000}";
+      _Calories="${(stepCountValue-82000)*Calorie_coeff}".substring(0,5);
+      percent=(stepCountValue-82000)/10000;
       print(percent);
     });
 
@@ -125,6 +125,15 @@ class _home extends State<home> {
 
             ),
 
+          ListTile(
+            title: Text('Your Route',
+              style: TextStyle(
+                  fontSize: 20.0
+              ),),
+
+
+          ),
+
             ListTile(
               title: Text('Past Record',
                 style: TextStyle(
@@ -154,10 +163,10 @@ class _home extends State<home> {
           children: <Widget>[
             CircularPercentIndicator(
                 radius: 350,
-            percent: percent,
+            percent: 0.45,
             progressColor: Colors.blue,
             lineWidth: 20.0,
-            center: Text("${percent*100}%",style:
+            center: Text("45%",style:    //"${percent*100}%"
               TextStyle(color: Colors.blue,
               fontSize:75.0,
                   fontWeight: FontWeight.bold),
@@ -173,7 +182,7 @@ class _home extends State<home> {
               ),
             ),
 
-              Text('$_stepCountValue',
+              Text('4500',
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: 20.0
@@ -193,7 +202,7 @@ class _home extends State<home> {
                   ),
                 ),
 
-                Text('$_Calories',
+                Text('250',
                   style: TextStyle(
                       color: Colors.blue,
                       fontSize: 20.0

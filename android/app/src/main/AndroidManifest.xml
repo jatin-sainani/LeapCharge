@@ -16,6 +16,10 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="smartshoe"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value="AIzaSyD0dliJVQzsCCensVLN_Bb7788dwh4UBWo"/>
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

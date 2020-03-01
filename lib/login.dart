@@ -199,7 +199,7 @@ class _loginstate extends State<login> with TickerProviderStateMixin {
                                       onTap: ()
                                       {
                                         print(_controller.text);
-                                        if(_controller.text=='js.sainani.droid@gmail.com') {
+                                        if(_controller.text=='') {
                                           setState(() {
                                             animationStatus = 1;
                                           });
