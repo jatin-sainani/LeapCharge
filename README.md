@@ -10,6 +10,19 @@ The LeapCharge project deals with creating an efficient energy source. The proje
 <li>Health- A track of the amount of steps the user has taken in the past month will be recorded and according to it the number of calories burned will be shown per day.</li>
 </ul>
 
-#Circuit Diagram
-<img src="Screenshots/circuit.png" width="500">
-<img src="Screenshots/circuit2.png" width="500">
+# Circuit Diagram
+<img src="Screenshot/circuit2.png" width="500">
+
+
+# Screenshots
+
+App made using flutter
+
+
+1. Current Records
+<img src="Screenshot/Screenshot_20200921-172529.png" width="250">    
+
+2. Past Records
+<img src="Screenshot/Screenshot_20200921-172539.png" width="250">
+
+
