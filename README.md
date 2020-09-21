@@ -11,6 +11,8 @@ The LeapCharge project deals with creating an efficient energy source. The proje
 </ul>
 
 # Circuit Diagram
+
+1. Voltage amplifier circuit from CircuitDigest
 <img src="Screenshot/circuit2.png" width="500">
 
 
