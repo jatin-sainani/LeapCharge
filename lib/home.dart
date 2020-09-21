@@ -130,6 +130,7 @@ class _home extends State<home> {
               style: TextStyle(
                   fontSize: 20.0
               ),),
+            onTap: (){Navigator.of(context).pushReplacementNamed('route');},
 
 
           ),
@@ -161,17 +162,20 @@ class _home extends State<home> {
       body: Center(
         child: Column(
           children: <Widget>[
-            CircularPercentIndicator(
-                radius: 350,
-            percent: 0.45,
-            progressColor: Colors.blue,
-            lineWidth: 20.0,
-            center: Text("45%",style:    //"${percent*100}%"
-              TextStyle(color: Colors.blue,
-              fontSize:75.0,
-                  fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: CircularPercentIndicator(
+                  radius: 250,
+              percent: 0.45,
+              progressColor: Colors.blue,
+              lineWidth: 20.0,
+              center: Text("45%",style:    //"${percent*100}%"
+                TextStyle(color: Colors.blue,
+                fontSize:75.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              backgroundColor: Colors.red,),
             ),
-            backgroundColor: Colors.red,),
 
             Padding(padding: EdgeInsets.only(top: 50.0,)),
 

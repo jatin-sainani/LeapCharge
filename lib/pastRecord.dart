@@ -79,6 +79,16 @@ class _pastRecords extends State<pastRecords>
             ),
 
             ListTile(
+              title: Text('Your Route',
+                style: TextStyle(
+                    fontSize: 20.0
+                ),),
+              onTap: (){Navigator.of(context).pushReplacementNamed('route');},
+
+
+            ),
+
+            ListTile(
               title: Text('Past Record',
                 style: TextStyle(
                     fontSize: 20.0

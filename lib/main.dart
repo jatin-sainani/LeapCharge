@@ -5,6 +5,7 @@ import 'package:smartshoe/accounts.dart';
 import 'package:smartshoe/login.dart';
 import 'package:smartshoe/pastRecord.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:smartshoe/route.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         routes: <String,WidgetBuilder>
         {
           'login':(BuildContext context) => login(),
+          'route':(BuildContext context) => maps(),
           'home': (BuildContext context) => home(),
           'past': (BuildContext context) => pastRecords(),
           'accounts': (BuildContext context) => accounts(),
